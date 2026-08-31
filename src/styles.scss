@@ -1,3 +1,5 @@
+@use "./colors" as *;
+
 @font-face {
   font-family: "Inter";
   src: url(fonts/Inter/Inter-VariableFont_opsz\,wght.ttf);
@@ -8,65 +10,108 @@
   src: url(fonts/Rubik_Scribble/RubikScribble-Regular.ttf);
 }
 
+svg {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
 body {
+  background-color: $background;
   font-family: Inter, sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90vw;
+  width: 95vw;
   margin: auto;
+  color: $font;
 }
 
 h1 {
-  border: 3px solid black;
+  font-size: 4rem;
+  color: $primary;
   font-family: Rubik, sans-serif;
   text-align: center;
 }
 
 .current-joke {
-  border: 3px solid black;
+  background-color: $bg-light;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2rem;
 
   &__text {
-    border: 3px solid black;
-    width: 80%;
+    margin: 0 0 2rem 0;
   }
   &__actions {
-    border: 3px solid black;
     gap: 0.8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
+    width: 100%;
   }
   &__load,
   &__save {
     height: 3rem;
     width: 100%;
+    border-radius: 5px;
   }
   &__load {
+    background-color: $primary;
+    border: none;
   }
   &__save {
+    background-color: $bg-light;
+    color: $primary;
+    border-color: $primary;
+    border-style: groove;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
   }
 }
 
 .storage {
   &__heading {
     font-family: Rubik, sans-serif;
-    border: 3px solid black;
   }
   &__saved-joke {
-    border: 3px solid black;
+    background-color: $bg-light;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
   }
   &__text {
-    border: 3px solid black;
+    margin: 1rem;
   }
   &__delete {
+    margin: 1rem;
+    background-color: $delete;
+    border-radius: 4px;
+    border: none;
+    color: $font;
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .current-joke {
+    &__actions {
+      flex-direction: row;
+      justify-content: center;
+    }
+    &__load,
+    &__save {
+      max-width: 180px;
+      font-size: 1rem;
+    }
   }
 }
