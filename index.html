@@ -7,17 +7,15 @@
     <title>Witze-App</title>
   </head>
   <body>
-    <div id="app">
+    <div>
       <h1>Witze App</h1>
       <div class="current-joke">
-        <p class="current-joke__text">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum
-          expedita dolore nulla doloremque reprehenderit? Aspernatur consequatur
-          eligendi natus perspiciatis et!
+        <p  id="random-joke" class="current-joke__text">
+          Klicke auf den Button um einen Witz zu laden!
         </p>
         <div class="current-joke__actions">
-          <button class="current-joke__load">Neuen Witz laden</button
-          ><button class="current-joke__save">Witz speichern <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <button id="getJoke" class="current-joke__load">Neuen Witz laden</button
+          ><button id="saveJoke" class="current-joke__save">Witz speichern <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
   <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
 </svg>
 </button>
@@ -25,30 +23,8 @@
         </div>
         <div class="storage">
           <h2 class="storage__heading">Gespeicherte Witze</h2>
-          <div class="storage__saved-joke">
-            <p class="storage__text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis
-              aliquid neque rerum obcaecati blanditiis in!
-            </p>
-            <button class="storage__delete"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="m3 3 1.664 1.664M21 21l-1.5-1.5m-5.485-1.242L12 17.25 4.5 21V8.742m.164-4.078a2.15 2.15 0 0 1 1.743-1.342 48.507 48.507 0 0 1 11.186 0c1.1.128 1.907 1.077 1.907 2.185V19.5M4.664 4.664 19.5 19.5" />
-</svg>
-</button>
-          </div>
-          <div class="storage__saved-joke">
-            <p class="storage__text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis
-              aliquid neque rerum obcaecati blanditiis in!
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis
-              aliquid neque rerum obcaecati blanditiis in!
-            </p>
-            <button class="storage__delete"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="m3 3 1.664 1.664M21 21l-1.5-1.5m-5.485-1.242L12 17.25 4.5 21V8.742m.164-4.078a2.15 2.15 0 0 1 1.743-1.342 48.507 48.507 0 0 1 11.186 0c1.1.128 1.907 1.077 1.907 2.185V19.5M4.664 4.664 19.5 19.5" />
-</svg>
-</button>
-          </div>
+          <div id="wrapper"><p><i>Noch keine gespeicherten Witze</i></p></div>
         </div>
-        
       </div>
     </div>
 
